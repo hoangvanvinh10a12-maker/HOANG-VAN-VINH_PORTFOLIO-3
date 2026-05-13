@@ -3,39 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hoàng Văn Vinh | Designer Portfolio</title>
+  <title>Hoàng Văn Vinh | UI/UX Designer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="hero-shell">
-    <div class="hero-stage">
-      <div class="hero-backdrop"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-badge">UI/UX Designer · Brand Storyteller</div>
-        <div class="hero-header">
-          <div class="hero-avatar" aria-label="Personal avatar">
-            <span class="avatar-inner">HV</span>
-          </div>
-          <div class="hero-title-group">
-            <h1 class="hero-title">
-              <span class="hero-title-strong">Hoàng Văn Vinh</span>
-            </h1>
-            <p class="hero-subtitle">Crafting emotional digital experiences with timeless visual storytelling.</p>
-          </div>
-        </div>
-        <p class="hero-description">Premium product design for ambitious brands, blending strategic clarity with cinematic, polished interfaces.</p>
-        <div class="hero-actions">
-          <a href="#work" class="button button-primary">View Portfolio</a>
-          <a href="#contact" class="button button-secondary">Let's Connect</a>
-        </div>
+  <div class="page-shell">
+    <header class="site-header" id="siteHeader">
+      <div class="brand-logo">
+        <span class="logo-mark">V</span>
+        <span class="logo-text">Vinh</span>
       </div>
-      <div class="leaves" aria-hidden="true"></div>
-    </div>
-  </main>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+        <span class="toggle-label" id="themeLabel">Light</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-section" id="home">
+        <div class="hero-copy">
+          <span class="hero-badge">Student UI/UX Designer</span>
+          <div class="hero-title-row">
+            <div class="hero-avatar">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=80" alt="Hoàng Văn Vinh avatar" />
+            </div>
+            <div>
+              <h1 class="hero-title">Hoàng Văn Vinh</h1>
+              <p class="hero-tagline">Bringing warm autumn-inspired visual design and thoughtful UX to every digital story.</p>
+            </div>
+          </div>
+
+          <p class="hero-copytext">I design elegant, calm portfolio experiences that feel premium, personal, and quietly confident. The interface blends golden autumn warmth with polished clarity for recruiter-ready first impressions.</p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="button button-primary">Hire Me</a>
+            <a href="#projects" class="button button-secondary">See My Work</a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-card">
+              <strong>2+</strong>
+              <span>Years of design growth</span>
+            </div>
+            <div class="highlight-card">
+              <strong>15+</strong>
+              <span>Projects crafted</span>
+            </div>
+            <div class="highlight-card">
+              <strong>UX & Visual</strong>
+              <span>Strategy, research, product</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image" aria-hidden="true"></div>
+          <div class="hero-overlay"></div>
+          <div class="leaf-layer" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="section-intro">
+          <small>About Me</small>
+          <h2>Soft, warm design with thoughtful structure.</h2>
+          <p>As a student designer, I focus on premium, calm interfaces that help brands tell meaningful stories. My work balances visual polish with approachable clarity.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Autumn designer portrait" />
+          </div>
+          <div class="about-details">
+            <p>I enjoy creating memorable digital touchpoints with warm color systems, soft layouts, and intuitive product journeys. Each concept is crafted for emotional resonance and strong usability.</p>
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="icon">🧠</div>
+                <div>
+                  <strong>Design Thinking</strong>
+                  <p>User-first process from research to prototype.</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="icon">🎨</div>
+                <div>
+                  <strong>Visual Systems</strong>
+                  <p>Warm palettes, polished typography, and refined layouts.</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="icon">⚡</div>
+                <div>
+                  <strong>Brand Presence</strong>
+                  <p>Modern storytelling with calm, premium atmosphere.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-section" id="projects">
+        <div class="section-head">
+          <small>Featured Work</small>
+          <h2>Projects that feel premium and simple.</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-hero" style="background-image: url('https://images.unsplash.com/photo-1522202224167-5fedae0a70d3?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="project-content">
+              <span>UX Strategy</span>
+              <h3>Autumn Meditation App</h3>
+              <p>Designed a calm mobile experience for mindful routines with soft interactions and autumn-inspired visuals.</p>
+              <div class="project-meta">Role: UX / Visual Design</div>
+              <a class="project-link" href="#contact">Explore <span>→</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-hero" style="background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="project-content">
+              <span>Brand Identity</span>
+              <h3>Golden Studio Portfolio</h3>
+              <p>Created a soft, modern identity system to elevate a creative studio with warmth, clarity, and visual cohesion.</p>
+              <div class="project-meta">Role: Visual Design</div>
+              <a class="project-link" href="#contact">Explore <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills-section" id="skills">
+        <div class="section-head">
+          <small>Skills & Experience</small>
+          <h2>Organized, recruiter-friendly design skills.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-card">
+            <h3>Core Skills</h3>
+            <div class="skill-line">
+              <span>UX Research</span>
+              <div class="skill-bar"><span style="width: 92%;"></span></div>
+            </div>
+            <div class="skill-line">
+              <span>Interface Design</span>
+              <div class="skill-bar"><span style="width: 88%;"></span></div>
+            </div>
+            <div class="skill-line">
+              <span>Brand Systems</span>
+              <div class="skill-bar"><span style="width: 84%;"></span></div>
+            </div>
+          </div>
+          <div class="experience-card">
+            <h3>Experience</h3>
+            <div class="experience-item">
+              <strong>Design Practice</strong>
+              <p>Focused on polished product concepts, user flows, and storytelling interfaces.</p>
+            </div>
+            <div class="experience-item">
+              <strong>Research & Testing</strong>
+              <p>Insights-driven visual solutions for meaningful interactions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-panel">
+          <div>
+            <small>Let’s connect</small>
+            <h2>Ready to build a warm, elegant digital presence?</h2>
+            <p>Reach out for design collaborations, internship opportunities, or thoughtful product work.</p>
+          </div>
+          <div class="contact-card">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hoang.vinh@example.com">hoang.vinh@example.com</a>
+            </div>
+            <div class="social-links">
+              <a href="#">Dribbble</a>
+              <a href="#">Behance</a>
+              <a href="#">LinkedIn</a>
+            </div>
+            <a href="mailto:hoang.vinh@example.com" class="button button-primary">Hire Me</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
