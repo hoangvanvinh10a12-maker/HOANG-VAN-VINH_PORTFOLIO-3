@@ -41,15 +41,27 @@ const createLeaves = () => {
     const leaf = document.createElement('div');
     leaf.className = 'leaf';
     const size = 25 + Math.random() * 50;
+    const duration = 8 + Math.random() * 6;
+    const delay = Math.random() * 4;
+    const drift = Math.random() * 150 - 75;
+    
     leaf.style.width = `${size}px`;
     leaf.style.height = `${size}px`;
-    leaf.style.setProperty('--delay', `${Math.random() * 4}s`);
-    leaf.style.setProperty('--drift', `${Math.random() * 150 - 75}px`);
-    leaf.style.setProperty('--scale', `${0.6 + Math.random() * 0.8}`);
+    leaf.style.setProperty('--drift', `${drift}px`);
     leaf.style.top = `${-16 - Math.random() * 20}vh`;
     leaf.style.left = `${Math.random() * 100}%`;
-    leaf.style.opacity = `${0.6 + Math.random() * 0.3}`;
+    leaf.style.opacity = `${0.7 + Math.random() * 0.3}`;
+    
+    // Apply combined animations
+    leaf.style.animation = `fall ${duration}s linear ${delay}s infinite, drift ${duration}s ease-in-out ${delay}s infinite`;
+    
     leafContainer.appendChild(leaf);
+    
+    // Recreate leaf after animation completes for smooth infinite effect
+    leaf.addEventListener('animationend', () => {
+      leaf.style.top = `${-16 - Math.random() * 20}vh`;
+      leaf.style.left = `${Math.random() * 100}%`;
+    });
   }
 };
 
