@@ -5,9 +5,9 @@
   --surface-soft: rgba(255, 241, 226, 0.16);
   --text: #f7ede3;
   --text-muted: #d6bfae;
-  --primary: #ff8c00;
+  --primary: #FFA94D;
   --accent: #ff3b3b;
-  --yellow: #ffd27d;
+  --yellow: #FFD166;
   --border: rgba(255, 255, 255, 0.1);
   --shadow: 0 34px 88px rgba(7, 6, 5, 0.24);
   --radius: 32px;
@@ -18,7 +18,7 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, rgba(255, 160, 82, 0.12), transparent 36%), #24130f;
+  background: radial-gradient(circle at top, rgba(255, 169, 77, 0.15), rgba(255, 209, 102, 0.08) 40%, transparent 70%), linear-gradient(180deg, rgba(255, 169, 77, 0.05) 0%, rgba(255, 209, 102, 0.03) 50%, transparent 100%), #24130f;
   color: var(--text);
   overflow-x: hidden;
 }
@@ -200,8 +200,9 @@ body.light .toggle-thumb {
   font-size: clamp(3.4rem, 5vw, 5.6rem);
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: #ff3b3b;
-  text-shadow: 0 0 0.5px rgba(255, 140, 0, 0.14), 0 0 0.8px rgba(255, 140, 0, 0.1);
+  color: #FF3B3B;
+  text-shadow: 0 0 8px rgba(255, 179, 193, 0.3), 0 0 16px rgba(255, 179, 193, 0.2), 0 0 24px rgba(255, 179, 193, 0.1);
+  font-weight: 700;
 }
 
 .hero-title::before {
@@ -716,4 +717,17 @@ body.light .hero-image {
 
 .modal-close:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+/* Shimmer animation for hero name */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-115%);
+  }
+  50% {
+    transform: translateX(115%);
+  }
+  100% {
+    transform: translateX(115%);
+  }
 }
